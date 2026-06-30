@@ -289,7 +289,7 @@ kubectl logs -n product-app -l app=product-backend --tail=30
 
 ## Author
 
-**MD ONIK AZAD** — [github.com/mdanikazad]ir2002(https://github.com/mdanikazad)
+**MD ONIK AZAD** — [github.com/mdanikazad](https://github.com/mdanikazad)
 
 <div align="center">
 
