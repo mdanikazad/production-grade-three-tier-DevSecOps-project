@@ -40,7 +40,7 @@ This is a **full DevSecOps project**, not just an app deployment. It wires toget
 - **Shift-left security** — secret scanning, IaC scanning, dependency & image scanning on every push.
 - **Automated CI/CD** — a single GitHub Actions pipeline handles scan → test → build → push → release.
 - **GitOps delivery** — **ArgoCD** is the single source of truth. The pipeline never runs `kubectl apply`; it only updates manifests in Git, and ArgoCD reconciles the cluster.
-- **Cloud-native runtime** — runs on a real **Amazon EKS** cluster (`onik-eks-cluster-testing`, region `us-east-1`).
+- **Cloud-native runtime** — runs on a real **Amazon EKS** cluster (`onik-eks-cluster`, region `us-east-1`).
 - **3-tier separation** — independent Frontend, Backend, and MySQL database tiers.
 
 ---
@@ -182,7 +182,7 @@ syncPolicy:
 
 ### 1. Prerequisites
 
-- AWS account + an EKS cluster (`onik-eks-cluster-testing` in `us-east-1`)
+- AWS account + an EKS cluster (`onik-eks-cluster` in `us-east-1`)
 - `kubectl`, `aws` CLI, and `docker` installed
 - Docker Hub account (`822800`)
 
@@ -201,7 +201,7 @@ npm install && npm start             # http://localhost:3000
 ### 3. Connect kubectl to EKS
 
 ```bash
-aws eks update-kubeconfig --region us-east-1 --name onik-eks-cluster-testing
+aws eks update-kubeconfig --region us-east-1 --name onik-eks-cluster
 kubectl get nodes
 ```
 
@@ -262,7 +262,7 @@ kubectl logs -n product-app -l app=product-backend --tail=30
 </details>
 
 <details>
-<summary><strong>CI error: <code>No cluster found for name: onik-eks-cluster-testing</code></strong></summary>
+<summary><strong>CI error: <code>No cluster found for name: onik-eks-cluster</code></strong></summary>
 
 **Cause:** Wrong AWS region in the workflow.
 

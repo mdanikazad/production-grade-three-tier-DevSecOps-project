@@ -15,9 +15,9 @@ permissions:
 
 env:
   AWS_REGION: us-east-1
-  EKS_CLUSTER_NAME: jubair-testing-eks-cluster
-  BACKEND_IMAGE: jubair2002/productbackend
-  FRONTEND_IMAGE: jubair2002/productfrontend
+  EKS_CLUSTER_NAME: onik-eks-cluster
+  BACKEND_IMAGE: 822800/productbackend
+  FRONTEND_IMAGE: 822800/productfrontend
 
 jobs:
   gitleaks-scan:
