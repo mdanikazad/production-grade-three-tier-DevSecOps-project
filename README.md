@@ -40,7 +40,7 @@ This is a **full DevSecOps project**, not just an app deployment. It wires toget
 - **Shift-left security** — secret scanning, IaC scanning, dependency & image scanning on every push.
 - **Automated CI/CD** — a single GitHub Actions pipeline handles scan → test → build → push → release.
 - **GitOps delivery** — **ArgoCD** is the single source of truth. The pipeline never runs `kubectl apply`; it only updates manifests in Git, and ArgoCD reconciles the cluster.
-- **Cloud-native runtime** — runs on a real **Amazon EKS** cluster (`jubair-eks-cluster-testing`, region `us-east-1`).
+- **Cloud-native runtime** — runs on a real **Amazon EKS** cluster (`onik-eks-cluster-testing`, region `us-east-1`).
 - **3-tier separation** — independent Frontend, Backend, and MySQL database tiers.
 
 ---
@@ -159,7 +159,7 @@ ArgoCD is the **continuous delivery** engine. It is configured via [`k8s-manifes
 
 ```yaml
 source:
-  repoURL: https://github.com/jubair2002/production-grade-3Tier-DevSecOps-project.git
+  repoURL: https://github.com/mdanikazad/production-grade-three-tier-DevSecOps-project.git
   targetRevision: main
   path: k8s-manifests
 destination:
@@ -182,9 +182,9 @@ syncPolicy:
 
 ### 1. Prerequisites
 
-- AWS account + an EKS cluster (`jubair-eks-cluster-testing` in `us-east-1`)
+- AWS account + an EKS cluster (`onik-eks-cluster-testing` in `us-east-1`)
 - `kubectl`, `aws` CLI, and `docker` installed
-- Docker Hub account (`jubair2002`)
+- Docker Hub account (`822800`)
 
 ### 2. Run locally (optional)
 
@@ -262,7 +262,7 @@ kubectl logs -n product-app -l app=product-backend --tail=30
 </details>
 
 <details>
-<summary><strong>CI error: <code>No cluster found for name: jubair-eks-cluster-testing</code></strong></summary>
+<summary><strong>CI error: <code>No cluster found for name: onik-eks-cluster-testing</code></strong></summary>
 
 **Cause:** Wrong AWS region in the workflow.
 
@@ -289,7 +289,7 @@ kubectl logs -n product-app -l app=product-backend --tail=30
 
 ## Author
 
-**Habibullah Jubair** — [github.com/jubair2002](https://github.com/jubair2002)
+**MD ONIK AZAD** — [github.com/mdanikazad]ir2002(https://github.com/mdanikazad)
 
 <div align="center">
 
