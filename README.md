@@ -149,7 +149,7 @@ Configure under **Repo → Settings → Secrets and variables → Actions**:
 | `AWS_ACCESS_KEY_ID` | Secret | AWS access key for EKS verification |
 | `AWS_SECRET_ACCESS_KEY` | Secret | AWS secret key for EKS verification |
 | `DOCKERHUB_TOKEN` | Secret | Push images to Docker Hub |
-| `DOCKERHUB_USERNAME` | Variable | Docker Hub username (`jubair2002`) |
+| `DOCKERHUB_USERNAME` | Variable | Docker Hub username (`822800`) |
 
 ---
 
@@ -201,7 +201,7 @@ npm install && npm start             # http://localhost:3000
 ### 3. Connect kubectl to EKS
 
 ```bash
-aws eks update-kubeconfig --region us-east-1 --name jubair-eks-cluster-testing
+aws eks update-kubeconfig --region us-east-1 --name onik-eks-cluster-testing
 kubectl get nodes
 ```
 
