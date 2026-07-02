@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: 822800/productbackend:6d9daf247345787c886befe3194bf7660a0c7211
+          image: 822800/productbackend:4dc1fe63ab995db6a67e737f67a60ac090c15ab4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
